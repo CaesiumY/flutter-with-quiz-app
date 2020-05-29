@@ -1,6 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_quiz/model/model_quiz.dart';
+import 'package:flutter_quiz/screen/screen_results.dart';
 import 'package:flutter_quiz/widget/widget_cadidate.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 
@@ -109,6 +110,12 @@ class _QuizScreenState extends State<QuizScreen> {
                         ? null
                         : () {
                             if (_currentIndex == widget.quizs.length - 1) {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => ResultScreen(
+                                          answers: _answers,
+                                          quizs: widget.quizs)));
                             } else {
                               _answerState = [
                                 false,
