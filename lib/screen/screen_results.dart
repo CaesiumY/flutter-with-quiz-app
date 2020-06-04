@@ -29,6 +29,7 @@ class ResultScreen extends StatelessWidget {
               title: Text('My Quiz APP'),
               backgroundColor: Colors.deepPurple,
               leading: Container(),
+              centerTitle: true,
             ),
             body: Center(
               child: Container(
